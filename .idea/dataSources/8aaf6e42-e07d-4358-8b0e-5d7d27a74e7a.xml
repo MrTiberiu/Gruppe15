@@ -1278,7 +1278,7 @@
       <System>1</System>
     </view>
     <table id="410" parent="4" name="JuniorA"/>
-    <table id="411" parent="4" name="JuniorB"/>
+    <table id="411" parent="4" name="JuniorB1"/>
     <table id="412" parent="4" name="JuniorC"/>
     <table id="413" parent="4" name="Senior"/>
     <column id="414" parent="330" name="PLUGIN_NAME">
@@ -5133,52 +5133,50 @@
       <ColNames>UtverID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="1228" parent="411" name="UtøverID">
+    <column id="1228" parent="411" name="UtverID">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>double|0s</DataType>
     </column>
-    <column id="1229" parent="411" name="Sek 3000m">
+    <column id="1229" parent="411" name="Score">
       <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>double|0s</DataType>
     </column>
-    <column id="1230" parent="411" name="Tid 3000m">
+    <column id="1230" parent="411" name="Sek3000m">
       <Position>3</Position>
       <DataType>double|0s</DataType>
     </column>
-    <column id="1231" parent="411" name="Watt 2000m">
+    <column id="1231" parent="411" name="Tid3000m">
       <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>double|0s</DataType>
     </column>
-    <column id="1232" parent="411" name="Tid 2000m">
+    <column id="1232" parent="411" name="Watt2000m">
       <Position>5</Position>
       <DataType>double|0s</DataType>
     </column>
-    <column id="1233" parent="411" name="Watt 60sec">
+    <column id="1233" parent="411" name="Tid2000m">
       <Position>6</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>double|0s</DataType>
     </column>
-    <column id="1234" parent="411" name="Antall kr.hev">
+    <column id="1234" parent="411" name="Watt60sec">
       <Position>7</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>double|0s</DataType>
     </column>
-    <column id="1235" parent="411" name="Cm Sargeant">
+    <column id="1235" parent="411" name="AntalKrHev">
       <Position>8</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>double|0s</DataType>
     </column>
-    <column id="1236" parent="411" name="Antall beveg.">
+    <column id="1236" parent="411" name="CmSargeant">
       <Position>9</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>double|0s</DataType>
     </column>
-    <column id="1237" parent="411" name="År">
+    <column id="1237" parent="411" name="AntallBeveg">
       <Position>10</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>double|0s</DataType>
     </column>
-    <key id="1238" parent="411" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>UtøverID</ColNames>
-      <Primary>1</Primary>
-    </key>
+    <column id="1238" parent="411" name="Year">
+      <Position>11</Position>
+      <DataType>double|0s</DataType>
+    </column>
     <column id="1239" parent="412" name="UtøverID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
