@@ -3,21 +3,22 @@
 <head>
     <title>Start </title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="css">
 </head>
 <body>
-<h1>Welcome to your skeleton ;.)</h1>
-<p>Hfefefefgefgefge.
+<h1>Velkommen til Roforbundet)</h1>
 
+
+<p>Trykk her for å hente en bruker!
+    <a href="RequestUserNameFromDb">Hent bruker</a>
 </p>
-<p>Click here to send a request for a user.
-    <a href="RequestUserNameFromDb">get user</a></p>
 
 
 <div class="container">
-    <label for="uname"><b>Username</b></label>
+    <label class = "control-table" id="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
 
-    <label for="psw"><b>Password</b></label>
+    <label class = "control-table" id="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
 
     <button type="submit">Login</button>
