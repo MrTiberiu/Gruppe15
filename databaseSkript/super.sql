@@ -841,7 +841,6 @@ VALUES
 
 (128, 'Harald Kryvi', 'Fana', 2003),
 
-
 (129, 'Kasper Bruun Frantzen', 'Horten', 2003),
 
 (130, 'Benedikt Folgerød', 'Fana', 2003),
@@ -850,8 +849,7 @@ VALUES
 
 (132, 'Henrik Langva Barstad', 'Aalesunds', 2003),
 
-(133, 'Jonas Markus Engelsgaard', 'Stavanger Roklub',
- 2003),
+(133, 'Jonas Markus Engelsgaard', 'Stavanger Roklub',2003),
 
 (134, 'Eirik Otterå', 'Bergens', 2003),
 
