@@ -1,0 +1,16 @@
+TYPE=VIEW
+query=select `db2`.`seniora`.`Score` AS `Score`,`db2`.`seniora`.`Year` AS `Year` from `db2`.`seniora` limit 10
+md5=30fc64d03fd895043b4b7898798c139d
+updatable=0
+algorithm=0
+definer_user=root
+definer_host=%
+suid=2
+with_check_option=0
+timestamp=2020-11-09 14:39:47
+create-version=2
+source=SELECT Score, Year\nFROM SeniorA\nLIMIT 10
+client_cs_name=utf8mb4
+connection_cl_name=utf8mb4_general_ci
+view_body_utf8=select `db2`.`seniora`.`Score` AS `Score`,`db2`.`seniora`.`Year` AS `Year` from `db2`.`seniora` limit 10
+mariadb-version=100505

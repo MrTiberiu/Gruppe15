@@ -1,0 +1,27 @@
+USE `DB2`;
+
+CREATE VIEW Topscore_SeniorAde4e AS
+SELECT UtoverFK
+FROM SeniorA
+LIMIT 10;
+
+CREATE VIEW Topscore_SeniorAde4e1 AS
+SELECT UtoverFK
+FROM JuniorA
+LIMIT 10;
+
+CREATE VIEW Topscore_SeniorAde4e2 AS
+SELECT UtoverFK
+FROM JuniorB
+LIMIT 10;
+
+CREATE VIEW Topscore_SeniorAde4e3 AS
+SELECT UtoverFK
+FROM JuniorC
+LIMIT 10;
+
+CREATE VIEW Topscore_SeniorAde4e4 AS
+SELECT Navn
+FROM Utover
+LIMIT 10;
+

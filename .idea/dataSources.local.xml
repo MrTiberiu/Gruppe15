@@ -16,6 +16,7 @@
             <name qname="information_schema" />
             <name qname="mysql" />
             <name qname="Database" />
+            <name qname="DB2" />
           </node>
         </introspection-scope>
       </schema-mapping>

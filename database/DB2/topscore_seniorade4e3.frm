@@ -1,0 +1,16 @@
+TYPE=VIEW
+query=select `db2`.`juniorc`.`UtoverFK` AS `UtoverFK` from `db2`.`juniorc` limit 10
+md5=68d60e3b82d8db59753e29844bc948c9
+updatable=0
+algorithm=0
+definer_user=root
+definer_host=%
+suid=2
+with_check_option=0
+timestamp=2020-11-09 14:48:36
+create-version=2
+source=SELECT UtoverFK\nFROM JuniorC\nLIMIT 10
+client_cs_name=utf8mb4
+connection_cl_name=utf8mb4_general_ci
+view_body_utf8=select `db2`.`juniorc`.`UtoverFK` AS `UtoverFK` from `db2`.`juniorc` limit 10
+mariadb-version=100505
