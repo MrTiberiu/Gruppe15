@@ -1,3 +1,11 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: ramzanismailov
+  Date: 09/11/2020
+  Time: 14:02
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,23 +21,23 @@
 -->
 
 <div class ="center">
-<h1>Login</h1>
-    
-        <form method="GET" action="/mainPage/mainpage.html">
+    <h1>Login</h1>
+
+    <form method="GET" action="/mainPage/mainpage.html">
         <div class="txt_field">
             <input type="text" placeholder ="Brukernavn"required>
             <span></span>
-            <label></label>    
+            <label></label>
         </div>
         <div class="txt_field">
             <input type="password" placeholder = "Passord" required>
             <span></span>
-            <label></label>    
+            <label></label>
         </div>
         <div class="pass">Glemt passord?</div>
-            
+
         <input type="submit" value = "Login">
-        
+
         <div class="signup_link">
             Har du ikke en bruker? <a href="/RegistrationPage/registration.html">Trykk her</a>
         </div>
