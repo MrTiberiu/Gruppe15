@@ -7,7 +7,7 @@ definer_user=root
 definer_host=%
 suid=2
 with_check_option=0
-timestamp=2020-11-10 16:01:18
+timestamp=2020-11-11 11:42:19
 create-version=2
 source=SELECT  Utover.Navn , JuniorA.Score, Watt5000m, Tid5000m, Watt2000m, Tid2000m, Watt60sec, Prosentliggro, Kiloliggro, CmSargeant, AntallBeveg, Ar\nFROM JuniorA\nINNER JOIN Utover ON  JuniorA.UtoverID = Utover.UtoverID\nwhere Utover.UtoverID= 100
 client_cs_name=utf8mb4
