@@ -1,0 +1,16 @@
+TYPE=VIEW
+query=select `db7`.`juniora`.`ResultatID` AS `ResultatID`,`db7`.`juniora`.`UtoverID` AS `UtoverID`,`db7`.`juniora`.`Score` AS `Score`,`db7`.`juniora`.`Watt5000m` AS `Watt5000m`,`db7`.`juniora`.`Tid5000m` AS `Tid5000m`,`db7`.`juniora`.`Watt2000m` AS `Watt2000m`,`db7`.`juniora`.`Tid2000m` AS `Tid2000m`,`db7`.`juniora`.`Watt60sec` AS `Watt60sec`,`db7`.`juniora`.`Prosentliggro` AS `Prosentliggro`,`db7`.`juniora`.`Kiloliggro` AS `Kiloliggro`,`db7`.`juniora`.`CmSargeant` AS `CmSargeant`,`db7`.`juniora`.`AntallBeveg` AS `AntallBeveg`,`db7`.`juniora`.`Ar` AS `Ar` from `db7`.`juniora` limit 10
+md5=ac347476310649a3554e32dbbabaf5ea
+updatable=0
+algorithm=0
+definer_user=root
+definer_host=%
+suid=2
+with_check_option=0
+timestamp=2020-11-10 15:44:19
+create-version=2
+source=SELECT ResultatID, UtoverID, Score, Watt5000m, Tid5000m, Watt2000m, Tid2000m, Watt60sec, Prosentliggro, Kiloliggro, CmSargeant, AntallBeveg, Ar\nFROM JuniorA\nLIMIT 10
+client_cs_name=utf8mb4
+connection_cl_name=utf8mb4_general_ci
+view_body_utf8=select `db7`.`juniora`.`ResultatID` AS `ResultatID`,`db7`.`juniora`.`UtoverID` AS `UtoverID`,`db7`.`juniora`.`Score` AS `Score`,`db7`.`juniora`.`Watt5000m` AS `Watt5000m`,`db7`.`juniora`.`Tid5000m` AS `Tid5000m`,`db7`.`juniora`.`Watt2000m` AS `Watt2000m`,`db7`.`juniora`.`Tid2000m` AS `Tid2000m`,`db7`.`juniora`.`Watt60sec` AS `Watt60sec`,`db7`.`juniora`.`Prosentliggro` AS `Prosentliggro`,`db7`.`juniora`.`Kiloliggro` AS `Kiloliggro`,`db7`.`juniora`.`CmSargeant` AS `CmSargeant`,`db7`.`juniora`.`AntallBeveg` AS `AntallBeveg`,`db7`.`juniora`.`Ar` AS `Ar` from `db7`.`juniora` limit 10
+mariadb-version=100505

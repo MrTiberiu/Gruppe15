@@ -1,5 +1,6 @@
-USE `DB2`;
+USE `DB7`;
 
 CREATE VIEW Topscore_SeniorA AS
-SELECT  Score, Year
-FROM SeniorA;
+SELECT  Utover.Navn , SeniorA.Score, SeniorA.Year
+FROM SeniorA
+         INNER JOIN Utover ON  SeniorA.UtoverID = Utover.UtoverID;

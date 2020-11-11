@@ -1,0 +1,16 @@
+TYPE=VIEW
+query=select `db7`.`juniorb`.`ResultatID` AS `ResultatID`,`db7`.`juniorb`.`UtoverID` AS `UtoverID`,`db7`.`juniorb`.`Score` AS `Score`,`db7`.`juniorb`.`Sek3000m` AS `Sek3000m`,`db7`.`juniorb`.`Tid3000m` AS `Tid3000m`,`db7`.`juniorb`.`Watt2000m` AS `Watt2000m`,`db7`.`juniorb`.`Tid2000m` AS `Tid2000m`,`db7`.`juniorb`.`Watt60sec` AS `Watt60sec`,`db7`.`juniorb`.`AntalKrHev` AS `AntalKrHev`,`db7`.`juniorb`.`CmSargeant` AS `CmSargeant`,`db7`.`juniorb`.`AntallBeveg` AS `AntallBeveg`,`db7`.`juniorb`.`Year` AS `Year` from `db7`.`juniorb` limit 10
+md5=1cf367f92fbb5e8d10ca51042f107819
+updatable=0
+algorithm=0
+definer_user=root
+definer_host=%
+suid=2
+with_check_option=0
+timestamp=2020-11-10 15:44:19
+create-version=2
+source=SELECT ResultatID, UtoverID, Score, Sek3000m, Tid3000m, Watt2000m, Tid2000m, Watt60sec, AntalKrHev, CmSargeant, AntallBeveg, Year\nFROM JuniorB\nLIMIT 10
+client_cs_name=utf8mb4
+connection_cl_name=utf8mb4_general_ci
+view_body_utf8=select `db7`.`juniorb`.`ResultatID` AS `ResultatID`,`db7`.`juniorb`.`UtoverID` AS `UtoverID`,`db7`.`juniorb`.`Score` AS `Score`,`db7`.`juniorb`.`Sek3000m` AS `Sek3000m`,`db7`.`juniorb`.`Tid3000m` AS `Tid3000m`,`db7`.`juniorb`.`Watt2000m` AS `Watt2000m`,`db7`.`juniorb`.`Tid2000m` AS `Tid2000m`,`db7`.`juniorb`.`Watt60sec` AS `Watt60sec`,`db7`.`juniorb`.`AntalKrHev` AS `AntalKrHev`,`db7`.`juniorb`.`CmSargeant` AS `CmSargeant`,`db7`.`juniorb`.`AntallBeveg` AS `AntallBeveg`,`db7`.`juniorb`.`Year` AS `Year` from `db7`.`juniorb` limit 10
+mariadb-version=100505

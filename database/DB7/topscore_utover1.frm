@@ -1,0 +1,16 @@
+TYPE=VIEW
+query=select `db7`.`utover`.`UtoverID` AS `UtoverID`,`db7`.`utover`.`Navn` AS `Navn`,`db7`.`utover`.`Klubb` AS `Klubb`,`db7`.`utover`.`Fodt` AS `Fodt` from `db7`.`utover` limit 10
+md5=58de7a43ef388c7fbdf29797c4dc7450
+updatable=0
+algorithm=0
+definer_user=root
+definer_host=%
+suid=2
+with_check_option=0
+timestamp=2020-11-10 15:44:19
+create-version=2
+source=SELECT UtoverID, Navn, Klubb, Fodt\nFROM Utover\nLIMIT 10
+client_cs_name=utf8mb4
+connection_cl_name=utf8mb4_general_ci
+view_body_utf8=select `db7`.`utover`.`UtoverID` AS `UtoverID`,`db7`.`utover`.`Navn` AS `Navn`,`db7`.`utover`.`Klubb` AS `Klubb`,`db7`.`utover`.`Fodt` AS `Fodt` from `db7`.`utover` limit 10
+mariadb-version=100505

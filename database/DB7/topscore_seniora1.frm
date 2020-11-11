@@ -1,0 +1,16 @@
+TYPE=VIEW
+query=select `db7`.`seniora`.`ResultatID` AS `ResultatID`,`db7`.`seniora`.`UtoverID` AS `UtoverID`,`db7`.`seniora`.`Score` AS `Score`,`db7`.`seniora`.`Watt5000m` AS `Watt5000m`,`db7`.`seniora`.`Tid5000m` AS `Tid5000m`,`db7`.`seniora`.`Watt2000m` AS `Watt2000m`,`db7`.`seniora`.`Tid2000m` AS `Tid2000m`,`db7`.`seniora`.`Watt60sec` AS `Watt60sec`,`db7`.`seniora`.`ProsentLiggIRo` AS `ProsentLiggIRo`,`db7`.`seniora`.`KgLiggIRo` AS `KgLiggIRo`,`db7`.`seniora`.`ProsentKneby` AS `ProsentKneby`,`db7`.`seniora`.`KgKneby` AS `KgKneby`,`db7`.`seniora`.`AntallBeveg` AS `AntallBeveg`,`db7`.`seniora`.`Year` AS `Year` from `db7`.`seniora` limit 10
+md5=e4583a386a4a7e220b542ca9e83c150e
+updatable=0
+algorithm=0
+definer_user=root
+definer_host=%
+suid=2
+with_check_option=0
+timestamp=2020-11-10 15:44:19
+create-version=2
+source=SELECT ResultatID, UtoverID, Score, Watt5000m, Tid5000m, Watt2000m, Tid2000m, Watt60sec, ProsentLiggIRo, KgLiggIRo, ProsentKneby, KgKneby, AntallBeveg, Year\nFROM SeniorA\nLIMIT 10
+client_cs_name=utf8mb4
+connection_cl_name=utf8mb4_general_ci
+view_body_utf8=select `db7`.`seniora`.`ResultatID` AS `ResultatID`,`db7`.`seniora`.`UtoverID` AS `UtoverID`,`db7`.`seniora`.`Score` AS `Score`,`db7`.`seniora`.`Watt5000m` AS `Watt5000m`,`db7`.`seniora`.`Tid5000m` AS `Tid5000m`,`db7`.`seniora`.`Watt2000m` AS `Watt2000m`,`db7`.`seniora`.`Tid2000m` AS `Tid2000m`,`db7`.`seniora`.`Watt60sec` AS `Watt60sec`,`db7`.`seniora`.`ProsentLiggIRo` AS `ProsentLiggIRo`,`db7`.`seniora`.`KgLiggIRo` AS `KgLiggIRo`,`db7`.`seniora`.`ProsentKneby` AS `ProsentKneby`,`db7`.`seniora`.`KgKneby` AS `KgKneby`,`db7`.`seniora`.`AntallBeveg` AS `AntallBeveg`,`db7`.`seniora`.`Year` AS `Year` from `db7`.`seniora` limit 10
+mariadb-version=100505
