@@ -1,5 +1,5 @@
 
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% @ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +18,7 @@
 
   
 <div class="register-data">
-  <form method="GET" action="#">
+  <form method="GET" action="./data-reg.html">
   <h2> Registrer data </h2>
   <img src="./media/undraw_data_processing_yrrv.svg" alt="data">
     <p>Vil du legge til data? <br>
