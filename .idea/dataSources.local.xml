@@ -17,6 +17,7 @@
             <name qname="mysql" />
             <name qname="Database" />
             <name qname="DB7" />
+            <name qname="DB9" />
           </node>
         </introspection-scope>
       </schema-mapping>

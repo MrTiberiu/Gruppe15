@@ -1,4 +1,4 @@
-USE `DB7`;
+USE `DB9`;
 
 CREATE VIEW Topscore_JuniorA AS
 SELECT  Utover.Navn , JuniorA.Score, JuniorA.Ar
