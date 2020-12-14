@@ -1,5 +1,5 @@
 <%@ page import="java.sql.*" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language= "java" %>
 <html>
 <head>
     <title>Get Data</title>
@@ -7,17 +7,6 @@
 <body>
 
 <h1>Retrieve data from database in jsp</h1>
-<table>
-        <tr>
-
-            <td>id</td>
-        <td>First name</td>
-        <td>Last name</td>
-        <td>email name</td>
-        <td>password</td>
-     </tr>
-</table>
-
 
 
 <%
@@ -25,32 +14,29 @@
     try{
 
         Class.forName("org.mariadb.jdbc.Driver");
-        Connection con = DriverManager.getConnection("jdbc:mariadb://172.17.0.1:3308/Registration","root","12345");
+        Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3308/DB2","root","12345");
 
         Statement stmt = con.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT * FROM test");
+        ResultSet rs = stmt.executeQuery("USE DB2; SELECT * FROM Utover;");
 
-        while(rs.next()){%>
+        while(rs.next()){
 
-        <tr>
+       int id = rs.getInt("UtoverID");
+       String navn = rs.getString("Navn");
+       String klubb = rs.getString("Klubb");
+       int fodt = rs.getInt("Fodt");
 
-            <td><%rs.getString(1);%></td>
-            <td><%rs.getString(2);%></td>
-            <td><%rs.getString(3);%></td>
-            <td><%rs.getString(4);%></td>
-            <td><%rs.getString(5);%></td>
-
-        </tr>
+       System.out.format("%s, %s, %s, %s\n", id, navn, klubb, fodt);
 
 
+        }
 
-        <%}
-
-
+        stmt.close();
 
 
     }catch(Exception e){
-
+            System.err.println("Got an exception! ");
+            System.err.println(e.getMessage());
 
     }
 

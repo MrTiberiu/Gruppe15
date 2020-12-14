@@ -2,22 +2,22 @@
 <dataSource name="@localhost">
   <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.19">
     <root id="1">
-      <ServerVersion>10.5.4</ServerVersion>
+      <ServerVersion>10.5.5</ServerVersion>
       <DefaultEngine>InnoDB</DefaultEngine>
       <DefaultCasing>mixed/mixed</DefaultCasing>
     </root>
-    <schema id="2" parent="1" name="Registration">
-      <Collation>utf8mb4_general_ci</Collation>
-    </schema>
-    <schema id="3" parent="1" name="information_schema">
+    <schema id="2" parent="1" name="DB1">
       <Current>1</Current>
-      <Collation>utf8_general_ci</Collation>
-    </schema>
-    <schema id="4" parent="1" name="mysql">
       <Collation>utf8mb4_general_ci</Collation>
     </schema>
-    <schema id="5" parent="1" name="performance_schema">
+    <schema id="3" parent="1" name="DB2">
+      <Collation>utf8mb4_general_ci</Collation>
+    </schema>
+    <schema id="4" parent="1" name="information_schema">
       <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="5" parent="1" name="mysql">
+      <Collation>utf8mb4_general_ci</Collation>
     </schema>
     <collation id="6" parent="1" name="armscii8_bin">
       <Charset>armscii8</Charset>
@@ -1027,7 +1027,7 @@
     </collation>
     <user id="328" parent="1" name="mariadb.sys">
       <Host>localhost</Host>
-      <ObjectGrants>SELECT,UPDATE,DELETE|mysql.global_priv:null
+      <ObjectGrants>SELECT,DELETE|mysql.global_priv:null
 </ObjectGrants>
     </user>
     <user id="329" parent="1" name="root">
@@ -1040,32 +1040,361 @@
       <ObjectGrants>ALL PRIVILEGES!
 </ObjectGrants>
     </user>
-    <table id="331" parent="2" name="test"/>
-    <column id="332" parent="331" name="id">
+    <table id="331" parent="3" name="Admin"/>
+    <table id="332" parent="3" name="Brukere"/>
+    <table id="333" parent="3" name="JuniorA"/>
+    <table id="334" parent="3" name="JuniorB"/>
+    <table id="335" parent="3" name="JuniorC"/>
+    <table id="336" parent="3" name="SeniorA"/>
+    <table id="337" parent="3" name="Trener"/>
+    <table id="338" parent="3" name="Utover"/>
+    <column id="339" parent="331" name="BrukerID">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="340" parent="331" name="TrenerID">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="341" parent="331" name="Passordhash">
+      <Position>3</Position>
+      <DataType>binary(20)|0s</DataType>
+    </column>
+    <index id="342" parent="331" name="TrenerID">
+      <ColNames>TrenerID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="343" parent="331" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>BrukerID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="344" parent="331" name="admin_ibfk_1">
+      <ColNames>TrenerID</ColNames>
+      <RefTableName>Trener</RefTableName>
+      <RefColNames>TrenerID</RefColNames>
+    </foreign-key>
+    <column id="345" parent="332" name="BrukerID">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="346" parent="332" name="UtoverID">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="347" parent="332" name="Passordhash">
+      <Position>3</Position>
+      <DataType>binary(20)|0s</DataType>
+    </column>
+    <index id="348" parent="332" name="UtoverID">
+      <ColNames>UtoverID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="349" parent="332" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>BrukerID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="350" parent="332" name="brukere_ibfk_1">
+      <ColNames>UtoverID</ColNames>
+      <RefTableName>Utover</RefTableName>
+      <RefColNames>UtoverID</RefColNames>
+    </foreign-key>
+    <column id="351" parent="333" name="ResultatID">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="352" parent="333" name="UtoverID">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="353" parent="333" name="Score">
+      <Position>3</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="354" parent="333" name="Watt5000m">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="355" parent="333" name="Tid5000m">
+      <Position>5</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="356" parent="333" name="Watt2000m">
+      <Position>6</Position>
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="357" parent="333" name="Tid2000m">
+      <Position>7</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="358" parent="333" name="Watt60sec">
+      <Position>8</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="359" parent="333" name="Prosentliggro">
+      <Position>9</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="360" parent="333" name="Kiloliggro">
+      <Position>10</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="361" parent="333" name="CmSargeant">
+      <Position>11</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="362" parent="333" name="AntallBeveg">
+      <Position>12</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="363" parent="333" name="Ar">
+      <Position>13</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <index id="364" parent="333" name="UtoverID">
+      <ColNames>UtoverID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="365" parent="333" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ResultatID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="366" parent="333" name="juniora_ibfk_1">
+      <ColNames>UtoverID</ColNames>
+      <RefTableName>Utover</RefTableName>
+      <RefColNames>UtoverID</RefColNames>
+    </foreign-key>
+    <column id="367" parent="334" name="ResultatID">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="368" parent="334" name="UtoverID">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="369" parent="334" name="Score">
+      <Position>3</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="370" parent="334" name="Sek3000m">
+      <Position>4</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="371" parent="334" name="Tid3000m">
+      <Position>5</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="372" parent="334" name="Watt2000m">
+      <Position>6</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="373" parent="334" name="Tid2000m">
+      <Position>7</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="374" parent="334" name="Watt60sec">
+      <Position>8</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="375" parent="334" name="AntalKrHev">
+      <Position>9</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="376" parent="334" name="CmSargeant">
+      <Position>10</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="377" parent="334" name="AntallBeveg">
+      <Position>11</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="378" parent="334" name="Year">
+      <Position>12</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <index id="379" parent="334" name="UtoverID">
+      <ColNames>UtoverID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="380" parent="334" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ResultatID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="381" parent="334" name="juniorb_ibfk_1">
+      <ColNames>UtoverID</ColNames>
+      <RefTableName>Utover</RefTableName>
+      <RefColNames>UtoverID</RefColNames>
+    </foreign-key>
+    <column id="382" parent="335" name="ResultatID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="333" parent="331" name="firstName">
+    <column id="383" parent="335" name="UtoverID">
       <Position>2</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="334" parent="331" name="lastName">
+    <column id="384" parent="335" name="3000m">
       <Position>3</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>double|0s</DataType>
     </column>
-    <column id="335" parent="331" name="email">
+    <column id="385" parent="335" name="60sec">
       <Position>4</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>double|0s</DataType>
     </column>
-    <column id="336" parent="331" name="password">
+    <column id="386" parent="335" name="Kroppshev">
       <Position>5</Position>
-      <DataType>varchar(20)|0s</DataType>
+      <DataType>double|0s</DataType>
     </column>
-    <key id="337" parent="331" name="PRIMARY">
+    <column id="387" parent="335" name="Sargeant">
+      <Position>6</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="388" parent="335" name="Beveglighet">
+      <Position>7</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="389" parent="335" name="Year">
+      <Position>8</Position>
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <index id="390" parent="335" name="UtoverID">
+      <ColNames>UtoverID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="391" parent="335" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>ResultatID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="392" parent="335" name="juniorc_ibfk_1">
+      <ColNames>UtoverID</ColNames>
+      <RefTableName>Utover</RefTableName>
+      <RefColNames>UtoverID</RefColNames>
+    </foreign-key>
+    <column id="393" parent="336" name="ResultatID">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="394" parent="336" name="UtoverID">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="395" parent="336" name="Score">
+      <Position>3</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="396" parent="336" name="Watt5000m">
+      <Position>4</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="397" parent="336" name="Tid5000m">
+      <Position>5</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="398" parent="336" name="Watt2000m">
+      <Position>6</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="399" parent="336" name="Tid2000m">
+      <Position>7</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="400" parent="336" name="Watt60sec">
+      <Position>8</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="401" parent="336" name="ProsentLiggIRo">
+      <Position>9</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="402" parent="336" name="KgLiggIRo">
+      <Position>10</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="403" parent="336" name="ProsentKneby">
+      <Position>11</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="404" parent="336" name="KgKneby">
+      <Position>12</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="405" parent="336" name="AntallBeveg">
+      <Position>13</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="406" parent="336" name="Year">
+      <Position>14</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <index id="407" parent="336" name="UtoverID">
+      <ColNames>UtoverID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="408" parent="336" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ResultatID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="409" parent="336" name="seniora_ibfk_1">
+      <ColNames>UtoverID</ColNames>
+      <RefTableName>Utover</RefTableName>
+      <RefColNames>UtoverID</RefColNames>
+    </foreign-key>
+    <column id="410" parent="337" name="TrenerID">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="411" parent="337" name="Navn">
+      <Position>2</Position>
+      <DataType>varchar(250)|0s</DataType>
+    </column>
+    <column id="412" parent="337" name="Klubb">
+      <Position>3</Position>
+      <DataType>varchar(250)|0s</DataType>
+    </column>
+    <key id="413" parent="337" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TrenerID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="414" parent="338" name="UtoverID">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="415" parent="338" name="Navn">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
+    </column>
+    <column id="416" parent="338" name="Klubb">
+      <Position>3</Position>
+      <DataType>varchar(100)|0s</DataType>
+    </column>
+    <column id="417" parent="338" name="Fodt">
+      <Position>4</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <key id="418" parent="338" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>UtoverID</ColNames>
       <Primary>1</Primary>
     </key>
   </database-model>
